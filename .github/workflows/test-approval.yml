@@ -6,7 +6,7 @@ permissions:
   issues: write
 jobs:
   builda-app:
-    environment: production
+    # environment: production
     runs-on: ubuntu-latest
     steps:
       - name: install dependency
