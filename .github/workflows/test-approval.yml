@@ -1,0 +1,21 @@
+name: test-approval2
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  builda-app:
+    environment: production
+    runs-on: ubuntu-latest
+    steps:
+      - name: install dependency
+        run: echo "install dependency"
+      - name: build app
+        run: echo "build app success"
+  wait-for-approval:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Deploy to Appservice
+        run: echo "deploy app success"
