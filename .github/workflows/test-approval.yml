@@ -16,7 +16,7 @@ jobs:
         run: echo "install dependency"
       - name: build app
         run: echo "build app success"
-  wait-for-approval:
+  deploy-appservice:
     needs: [builda-app]
     runs-on: ubuntu-latest
     environment: 
